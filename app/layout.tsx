@@ -1,14 +1,20 @@
-HEAD
-import "./globals.css"; export const metadata={title:"DesignPro Mega",description:"Multilingual Next.js Project"}; export default function RootLayout({children}){return(<html lang="en"><body style={{margin:0,fontFamily:"sans-serif"}}>{children}</body></html>);}
+﻿import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import './globals.css';
 
-﻿import "./globals.css";
-import type { ReactNode } from "react";
+export const metadata = {
+  title: 'Design Pro Mega',
+  description: 'تصميم وإنتاج فيديوهات احترافية',
+};
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="ar" dir="rtl">
+      <body className="bg-gray-950 text-white">
+        <Header />
+        <main className="pt-20">{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }
-0be64c92fa64ac9fa69c021b8c4f4d1722de3b74
