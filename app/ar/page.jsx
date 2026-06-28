@@ -1,4 +1,4 @@
-import Navbar from "../components/Navbar";
+﻿import Navbar from "../components/Navbar";
 import ar from "../../public/locales/ar.json";
 
 export default function Page() {
@@ -9,7 +9,7 @@ export default function Page() {
         <h1 className="text-4xl font-bold mb-4">{ar.hero.title}</h1>
         <p className="text-lg opacity-90 mb-8">{ar.hero.subtitle}</p>
         <a href="/ar/tools" className="px-6 py-3 bg-white text-primary font-semibold rounded-xl shadow-lg">
-          ???????
+          الأدوات
         </a>
       </div>
     </div>
