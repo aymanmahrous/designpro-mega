@@ -1,0 +1,1 @@
+module.exports = { content: ['./app/**/*.{js,ts,jsx,tsx}','./components/**/*.{js,ts,jsx,tsx}'], theme: { extend: { colors: { primary: '#6366F1', secondary: '#EC4899' }, backgroundImage: { 'main-gradient': 'linear-gradient(135deg, #6366F1 0%, #EC4899 100%)' } } }, plugins: [] }
