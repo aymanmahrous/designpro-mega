@@ -1,0 +1,13 @@
+{
+  "hero": {
+    "title": "Discover the Ultimate Hub for Creative Tools",
+    "subtitle": "Over 70 advanced platforms built for graphic designers, filmmakers and prompt engineers.",
+    "search": "Search for any tool..."
+  },
+  "navbar": {
+    "tools": "Tools",
+    "categories": "Categories",
+    "blog": "Blog",
+    "pricing": "Pricing"
+  }
+}
