@@ -1,5 +1,5 @@
 import Navbar from "../components/Navbar";
-import ar from "@/public/locales/ar.json";
+import ar from "../../public/locales/ar.json";
 
 export default function Page() {
   return (
