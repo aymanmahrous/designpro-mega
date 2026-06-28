@@ -1,4 +1,4 @@
-﻿import { getTools } from "@/lib/tools";
+﻿import { getTools } from "@/lib/data";
 
 export default async function Page({ params }: { params: { locale: string } }) {
   const q = params?.q;
