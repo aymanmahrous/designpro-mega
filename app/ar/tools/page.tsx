@@ -1,36 +1,21 @@
+﻿import { getTools } from "@/lib/tools";
 
-import Navbar from "../../components/Navbar";
+export default async function Page({ params }: { params: { locale: string } }) {
+  const q = params?.q;
 
-export default async function Page() {
-  const tools = [
-    { name: "???? ????", link: "#" },
-    { name: "????? ???", link: "#" },
-    { name: "????? ?????", link: "#" },
-    { name: "???? ??????? ?????", link: "#" },
-    { name: "????? ?? ?????", link: "#" },
-    { name: "????? ???? ???", link: "#" },
-    { name: "????? ??????", link: "#" },
-    { name: "????? ???? ???????", link: "#" },
-    { name: "????? ????? ?????", link: "#" },
-    { name: "????? ???????", link: "#" }
-  ];
+  let toolsList = await getTools();
+
+  if (q) {
+    const queryStr = q.trim().toLowerCase();
+    toolsList = toolsList.filter(t =>
+      t.name_ar.includes(queryStr) ||
+      t.name.toLowerCase().includes(queryStr)
+    );
+  }
 
   return (
-    <div className="min-h-screen bg-white text-gray-900">
-      <Navbar lang="ar" />
-      <div className="max-w-6xl mx-auto pt-32 px-6">
-        <h1 className="text-4xl font-bold mb-6 text-primary">????? ???????</h1>
-        <p className="text-lg mb-10 opacity-80">???? ?? 70 ???? ?????? ?? ???? ????.</p>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {tools.map((tool, i) => (
-            <a key={i} href={tool.link} className="p-6 bg-main-gradient text-white rounded-xl shadow-lg hover:scale-105 transition">
-              <h2 className="text-xl font-semibold">{tool.name}</h2>
-            </a>
-          ))}
-        </div>
-      </div>
+    <div>
+      {/* باقي الصفحة */}
     </div>
   );
 }
-
